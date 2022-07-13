@@ -7,7 +7,7 @@ fi
 
 
 echo "Following are the services listening..."
-netstat -plnt | grep -v tcp6 |grep tcp  > $work_dir/services_lt
+netstat -plnt | grep -v tcp6 |grep tcp  |grep LISTEN > $work_dir/services_lt
 cat $work_dir/services_lt |awk '{print $7}'  |cut -d "/" -f2 |cut -d: -f1
 echo "-----------------------"
 
