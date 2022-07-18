@@ -1,11 +1,13 @@
 work_dir="/tmp/post"
 
-if [ ! -d $work_dir ]
+if [  -d $work_dir ]
 then
-  mkdir $work_dir
+  rm -rf $work_dir
 fi
 
+mkdir $work_dir
 
+echo "-----------------------"
 echo "Following are the services listening..."
 netstat -plnt | grep -v tcp6 |grep tcp  |grep LISTEN > $work_dir/services_lt
 cat $work_dir/services_lt |awk '{print $7}'  |cut -d "/" -f2 |cut -d: -f1
