@@ -1,6 +1,14 @@
 work_dir="/system_upgrade/post"
 
-sleep 
+while $(sleep 1); do
+  echo "Waiting for systemd to finish booting..."
+  if systemctl is-system-running | grep -qE "running|degraded"; then
+    break
+  fi
+done
+
+echo "systemd finished booting...Start checks....."
+
 echo "------------------------------"
 echo "Host details.."
 echo "----"
