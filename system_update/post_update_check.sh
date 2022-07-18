@@ -1,5 +1,6 @@
-work_dir="/tmp/post"
+work_dir="/system_upgrade/post"
 
+sleep 
 echo "------------------------------"
 echo "Host details.."
 echo "----"
