@@ -1,4 +1,4 @@
-work_dir="/tmp/post"
+work_dir="/system_upgrade/post"
 
 if [  -d $work_dir ]
 then
