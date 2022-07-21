@@ -18,4 +18,4 @@ df -h |awk '{print $6}' > $work_dir/pre_mnt
 cat $work_dir/pre_mnt
 echo "------------------"
 
-echo "Test secret ${{ secrets.WEB_HOOK }}"
+ 
