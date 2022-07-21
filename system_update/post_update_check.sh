@@ -36,4 +36,4 @@ df -h |awk '{print $6}' > $work_dir/post_mnt
 cmp --silent  $work_dir/pre_mnt $work_dir/post_mnt  && echo "Successfully mounted \n  Current mount details: `cat $work_dir/post_mnt`"  || echo "ERROR: There is a CONFLICT in mount points!!!!\n ----- \n Current_Details  -      Required_Details \n `paste  $work_dir/post_mnt  $work_dir/pre_mnt`"
 echo "------------------------------"
 
-echo "Test secret ${{ secrets.WEB_HOOK }}"
+
